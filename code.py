@@ -1,3 +1,4 @@
+"""Binary Search Implementation"""
 def binary_search(arr, target):
     """Perform binary search on a sorted array."""
     left = 0
@@ -9,7 +10,7 @@ def binary_search(arr, target):
 
         if mid_val == target:
             return mid
-        elif mid_val < target:
+        if mid_val < target:
             left = mid + 1
         else:
             right = mid - 1
