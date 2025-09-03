@@ -1,4 +1,5 @@
 def binary_search(arr, target):
+    """Perform binary search on a sorted array."""
     left = 0
     right = len(arr) - 1
 
@@ -7,21 +8,21 @@ def binary_search(arr, target):
         mid_val = arr[mid]
 
         if mid_val == target:
-            return mid  
+            return mid
         elif mid_val < target:
             left = mid + 1
         else:
             right = mid - 1
 
-    return -1  
+    return -1
 
 numbers = [2, 4, 7, 10, 13, 18, 21, 25, 30, 35]
-target_value = 18
+TARGET = 18
 
-result = binary_search(numbers, target_value)
+RESULT = binary_search(numbers, TARGET)
 
 
-if result != -1:
-    print(f"Target {target_value} found at index {result}.")
+if RESULT != -1:
+    print(f"Target {TARGET} found at index {RESULT}.")
 else:
-    print(f"Target {target_value} not found in the list.")
+    print(f"Target {TARGET} not found in the list.")
